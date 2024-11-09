@@ -1,0 +1,403 @@
+
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #111; /* Dark background */
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Logo styling */
+.logo {
+    flex: 1;
+}
+
+.logo-img {
+    width: 50px; /* Adjust based on your logo */
+    height: auto;
+}
+
+/* Navbar Menu */
+.navbar-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #f1c40f; /* Gold color for hover */
+}
+
+/* Auth links styling */
+.auth-links a,
+.book-table a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 10px;
+    border-left: 1px solid #555;
+}
+
+.auth-links a:hover,
+.book-table a:hover {
+    color: #f1c40f; /* Gold color for hover */
+}
+
+/* Responsive adjustments */
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar-menu.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        color: #fff;
+    }
+}
+
+
+/* Hero Section Styling */
+
+
+
+/* Welcome Text Section */
+section#welcome-text {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #f8f9fa;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+section#welcome-text h2 {
+    color: #343a40;
+    font-size: 50px;
+    font-weight: 700;
+    padding-bottom: 12px;
+    animation: textPopUp 1s ease-in-out;
+}
+
+section#welcome-text p {
+    color: #555;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    padding-top: 10px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Slides Section */
+.slides {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+.slide_1 {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100px;
+    min-width: 100px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slide_1:hover {
+    min-width: 250px;
+    transform: scale(1.05);
+}
+
+.slide_1:hover .slide-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.slide-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.slide-info p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.slide-info h6 {
+    font-size: 14px;
+    margin: 8px 0;
+    font-weight: 400;
+}
+
+.slide-info a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 16px;
+    color: #fff;
+    background: #007bff;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.slide-info a:hover {
+    background: #0056b3;
+}
+
+.slide_2{ 
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/images/recipe_slides/recipe1.jpg);
+}
+.slide_3{ 
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/images/recipe_slides/recipe2.jpg);
+}
+.slide_4{ 
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/images/recipe_slides/recipe3.jpg);
+}
+.slide_5{ 
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/images/recipe_slides/recipe4.jpg);
+}
+.slide_6{ 
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/images/recipe_slides/recipe5.jpg);
+}
+.slide_7{ 
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/images/recipe_slides/recipe6.jpg);
+}
+.slide_8{ 
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/images/recipe_slides/recipe7.jpg);
+}
+.slide_9{ 
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/images/recipe_slides/recipe8.jpg);
+}
+
+
+
+/* Explore More Button */
+.slides a {
+    display: inline-block;
+    margin: 30px auto 0;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #343a40;
+    background: #ffdd57;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slides a:hover {
+    background: #ffc107;
+    transform: scale(1.05);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textPopUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 60px 0 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 240px;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #f1c40f;
+}
+
+.footer-section p {
+    line-height: 1.6;
+    font-size: 16px;
+    color: #ddd;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #f1c40f;
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 25px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.credit {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.credit a {
+    color: #f1c40f;
+    text-decoration: none;
+}
+
+.credit a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 13px;
+    color: #bbb;
+}
+
+.fa-heart {
+    color: #e74c3c;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin-bottom: 30px;
+    }
+}

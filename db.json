@@ -1,0 +1,48 @@
+{
+    "welcome": {
+      "title": "Uncover Kenya's Hidden Treasures",
+      "intro": "From diverse landscapes to vibrant cultures and unmatched wildlife, Kenya offers an adventure unlike any other. Start your journey with us and experience the magic of this beautiful land!"
+    },
+    "slides": [
+      {
+        "id": 1,
+        "title": "Nairobi - The City in the Wild",
+        "description": "A blend of modern city life and thrilling wildlife experiences.",
+        "link": "https://unsplash.com/photos/a-giraffe-standing-in-front-of-a-city-skyline-9gFshR2w1iw",
+        "image": "/gallery/recipe1.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Mombasa - Coastal Paradise",
+        "description": "Vibrant culture, pristine beaches, and rich history await you.",
+        "link": "#",
+        "image": "/gallery/recipe2.jpg"
+
+      },
+      {
+        "id": 3,
+        "title": "Kisumu - Lakeside Charm",
+        "description": "A vibrant city by Lake Victoria, known for its stunning sunsets, cultural heritage, and bustling markets.",
+        "link": "#",
+        "image": "/gallery/recipe3.jpg"
+
+      },
+      {
+        "id": 4,
+        "title": "Masai Mara - Safari Adventure",
+        "description": "One of the most famous safari destinations, home to the Great Migration.",
+        "link": "#",
+        "image": "/gallery/recipe4.jpg"
+
+      },
+      {
+        "id": 5,
+        "title": "Lake Nakuru - Flamingo Haven",
+        "description": "A sanctuary for wildlife, famous for its flamingos and rhinos.",
+        "link": "#",
+        "image": "/gallery/lake_nakuru_flamingos.jpg"
+
+      }
+    ]
+  }
+  
