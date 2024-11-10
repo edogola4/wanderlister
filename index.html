@@ -169,84 +169,68 @@
 
   
   
-    <!-- Blog Section Starts -->
-    <section class="#blog" id="blog">
-      <div class="container">
-          <div class="blog-par">
-
-  <h1 class="heading"><i class="fas fa-bullhorn"></i>Kenyan News & <span>Events</span></h1>
-              <!-- First Blog Entry -->
-              <div class="blog-content">
-                  <div class="blog-img-par">
-                      <img src="./gallery/nairobi_event.jpg" alt="Nairobi Event" class="img-responsive">
+   <!-- Blog Section Starts -->
+<section class="blog-section" id="blog">
+  <div class="container">
+      <h1 class="blog-heading"><i class="fas fa-bullhorn"></i> Kenyan News & <span>Events</span></h1>
+      
+      <div class="blog-grid">
+          <!-- First Blog Entry -->
+          <article class="blog-card">
+              <img src="./gallery/nairobi_event.jpg" alt="Nairobi Event" class="blog-image">
+              <div class="blog-info">
+                  <div class="blog-meta">
+                      <span class="author">Bran Don</span> |
+                      <span class="date">05.11.2024</span>
                   </div>
-                  <div class="blog-info-par">
-                      <ul>
-                          <li>Bran Don</li>
-                          <li>05.11.2024</li>
-                      </ul>
-                      <h4>Explore Nairobi's Vibrant Nightlife</h4>
-                      <p>Discover the best spots to enjoy Nairobi's nightlife, from live music to cultural
-                          performances. Experience Kenya's capital city like never before.</p>
-                  </div>
+                  <h4 class="blog-title">Explore Nairobi's Vibrant Nightlife</h4>
+                  <p class="blog-description">Discover the best spots to enjoy Nairobi's nightlife, from live music to cultural performances. Experience Kenya's capital city like never before.</p>
               </div>
+          </article>
 
-              <!-- Second Blog Entry -->
-              <div class="blog-content">
-                  <div class="blog-img-par">
-                      <img src="./gallery/mombasa_festival.jpg" alt="Mombasa Festival"
-                          class="img-responsive">
+          <!-- Second Blog Entry -->
+          <article class="blog-card">
+              <img src="./gallery/mombasa_festival.jpg" alt="Mombasa Festival" class="blog-image">
+              <div class="blog-info">
+                  <div class="blog-meta">
+                      <span class="author">Shantel Shartel</span> |
+                      <span class="date">15.11.2024</span>
                   </div>
-                  <div class="blog-info-par">
-                      <ul>
-                          <li>Shantel Shartel</li>
-                          <li>15.11.2024</li>
-                      </ul>
-                      <h4>Mombasa Cultural Festival</h4>
-                      <p>Join the annual Mombasa Cultural Festival and immerse yourself in the coastal traditions of
-                          Kenya with music, dance, and delicious cuisine.</p>
-                  </div>
+                  <h4 class="blog-title">Mombasa Cultural Festival</h4>
+                  <p class="blog-description">Join the annual Mombasa Cultural Festival and immerse yourself in the coastal traditions of Kenya with music, dance, and delicious cuisine.</p>
               </div>
-          </div>
+          </article>
 
-          <div class="blog-par">
-              <!-- Third Blog Entry -->
-              <div class="blog-content">
-                  <div class="blog-img-par">
-                      <img src="./gallery/maasai_mara_migration.jpg" alt="Maasai Mara Migration"
-                          class="img-responsive">
+          <!-- Third Blog Entry -->
+          <article class="blog-card">
+              <img src="./gallery/maasai_mara_migration.jpg" alt="Maasai Mara Migration" class="blog-image">
+              <div class="blog-info">
+                  <div class="blog-meta">
+                      <span class="author">Daisy Atieno</span> |
+                      <span class="date">20.11.2024</span>
                   </div>
-                  <div class="blog-info-par">
-                      <ul>
-                          <li>Daisy Atieno</li>
-                          <li>20.11.2024</li>
-                      </ul>
-                      <h4>The Great Migration in Maasai Mara</h4>
-                      <p>Witness the breathtaking wildebeest migration in the Maasai Mara, a spectacle of nature's raw
-                          beauty that draws visitors from around the world.</p>
-                  </div>
+                  <h4 class="blog-title">The Great Migration in Maasai Mara</h4>
+                  <p class="blog-description">Witness the breathtaking wildebeest migration in the Maasai Mara, a spectacle of nature's raw beauty that draws visitors from around the world.</p>
               </div>
+          </article>
 
-              <!-- Fourth Blog Entry -->
-              <div class="blog-content">
-                  <div class="blog-img-par">
-                      <img src="./gallery/diani_beach_clean.jpg" alt="Diani Beach Cleanup"
-                          class="img-responsive">
+          <!-- Fourth Blog Entry -->
+          <article class="blog-card">
+              <img src="./gallery/diani_beach_clean.jpg" alt="Diani Beach Cleanup" class="blog-image">
+              <div class="blog-info">
+                  <div class="blog-meta">
+                      <span class="author">Grace Owour</span> |
+                      <span class="date">25.11.2024</span>
                   </div>
-                  <div class="blog-info-par">
-                      <ul>
-                          <li>Grace Owour</li>
-                          <li>25.11.2024</li>
-                      </ul>
-                      <h4>Diani Beach Cleanup Initiative</h4>
-                      <p>Join volunteers in Diani Beach to clean up the beautiful coastline and help preserve Kenya's
-                          natural beauty for future generations.</p>
-                  </div>
+                  <h4 class="blog-title">Diani Beach Cleanup Initiative</h4>
+                  <p class="blog-description">Join volunteers in Diani Beach to clean up the beautiful coastline and help preserve Kenya's natural beauty for future generations.</p>
               </div>
-          </div>
+          </article>
       </div>
-  </section>
-  <!-- Blog Section Ends -->
+  </div>
+</section>
+<!-- Blog Section Ends -->
+
 
 
 
@@ -293,7 +277,7 @@
       <h2>Weather Lookup for Your Favorite Destinations</h2>
       <form id="weatherForm">
         <input type="text" id="destinationInput" placeholder="Enter a destination to see the weather Info" required>
-        <button type="button" onclick="fetchWeather()">Get Weather</button>
+        <button type="submit" onclick="fetchWeather()">Get Weather</button>
       </form>
       <ul id="weatherList"></ul>
     </div>
