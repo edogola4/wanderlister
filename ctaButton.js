@@ -16,7 +16,7 @@ function joinMembership() {
   
   // Function to display membership status with avatar
   function displayMembershipStatus(button, messageBox, messageText) {
-    button.textContent = "Karibu Our Member! 😊";
+    button.textContent = "Karibu Member! 😊";
     button.classList.add("disabled");
   
     // Set up welcome message with avatar
