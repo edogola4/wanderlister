@@ -17,7 +17,7 @@ function handleBooking(event) {
 
         // Display appropriate success or failure message
         if (isSuccess) {
-            alert("Booking successful! Thank you for choosing our tour.");
+            alert("Booking successful! Thank you for choosing Wanderlister.");
         } else {
             alert("Booking failed. Please check your connection and try again.");
         }

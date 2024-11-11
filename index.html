@@ -4,12 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WANDERLISTER | KENYA</title>
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
   integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
   crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<link rel="icon" type="image/x-icon" href="img/icons8-favicon-94.png">
+
  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -27,9 +31,9 @@
   <li><a class="active" href="#home"><i class="fas fa-home"></i> Home</a></li>
   <li><a class="active" href="#destinations"><i class="fas fa-map-marker-alt"></i> Destinations</a></li>
   <li><a class="active" href="#tours"><i class="fas fa-suitcase"></i> Tours</a></li>
-  <li><a href="#offers"><i class="fas fa-tags"></i> Offers</a></li>
-  <li><a href="#blog"><i class="fas fa-newspaper"></i> Blog</a></li>
-  <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+  <li><a class="active" href="#offers"><i class="fas fa-tags"></i> Offers</a></li>
+  <li><a class="active" href="#blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+  <li><a class="active" href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
 </ul>
 
 <!-- Call-to-Action Button -->
@@ -300,24 +304,78 @@
 
   <div class="container">
     <!-- Bucket List Section -->
-    <div id="bucketListContainer" class="bucket-list-container">
-      <h2>Your Essential Travel Destinations</h2>
-      <form id="bucketForm">
-        <input type="text" id="bucketItem" placeholder="Add a new must-visit place" required>
-        <button type="button" onclick="addBucketItem()">Add</button>
-      </form>
-      <ul id="bucketList"></ul>
-    </div>
+    <div class="bucket-list-container">
+      <h3>Your Essential Travel Destinations</h3>
+      <div class="input-container">
+          <input type="text" id="bucketItem" placeholder="Add a new must-visit place">
+          <div class="date-inputs">
+              <label>From: <input type="date" id="startDate"></label>
+              <label>To: <input type="date" id="endDate"></label>
+          </div>
+          <button onclick="addBucketItem()">Add Destination</button>
+      </div>
+      <ul id="bucketList"></ul> <!-- Ensure this ID matches with the one in JS -->
+  </div>
+  
+  <script src="path/to/your/script.js"></script>
+  
+  
+    
 
     <!-- Weather Lookup Section -->
     <div id="weatherContainer" class="weather-container">
-      <h2>Weather Lookup for Your Favorite Destinations</h2>
+      <h2>Weather🍃Lookup for Your Favorite Destinations🌍</h2>
       <form id="weatherForm">
         <input type="text" id="destinationInput" placeholder="Enter a destination to see the weather Info" required>
         <button type="submit" onclick="fetchWeather()">Get Weather</button>
       </form>
       <ul id="weatherList"></ul>
+      
     </div>
+    <div class="clock-container">
+      <div class="clock">
+        <div class="clock-face">
+          <div class="hour-hand"></div>
+          <div class="minute-hand"></div>
+          <div class="second-hand"></div>
+          <div class="number number-12">12</div>
+          <div class="number number-3">3</div>
+          <div class="number number-6">6</div>
+          <div class="number number-9">9</div>
+        </div>
+      </div>
+      <div class="timeLbl" id="local-time">
+        <h2>Local Time🌍</h2>
+      </div>
+    </div>
+    
+    <script>
+      function updateClock() {
+        const now = new Date();
+        const hour = now.getHours();
+        const minute = now.getMinutes();
+        const second = now.getSeconds();
+    
+        // Update analog clock hands
+        const hourDegree = (hour % 12) * 30 + minute * 0.5;  // Hour hand moves slowly as minute passes
+        const minuteDegree = minute * 6;  // Minute hand moves 6 degrees per minute
+        const secondDegree = second * 6;  // Second hand moves 6 degrees per second
+    
+        document.querySelector('.hour-hand').style.transform = `rotate(${hourDegree}deg)`;
+        document.querySelector('.minute-hand').style.transform = `rotate(${minuteDegree}deg)`;
+        document.querySelector('.second-hand').style.transform = `rotate(${secondDegree}deg)`;
+    
+        // Update digital time below
+        const localTimeElement = document.getElementById("local-time");
+        const localTimeString = now.toLocaleTimeString();
+        localTimeElement.textContent = `${localTimeString}`;
+      }
+    
+      setInterval(updateClock, 1000);
+      updateClock();  // Initial call to show time immediately
+    </script>
+    
+    
   </div>
 
 
