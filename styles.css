@@ -1047,20 +1047,22 @@ ul {
  
   
 
+  
   /* scroll top starts */
 #scroll-top {
-    position: fixed;
-    top: -140%;
-    left: 2rem; /* changed from right to left */
-    padding: 1rem 1.5rem;
-    font-size: 2rem;
-    background: #e90303;
-    color: rgb(13, 0, 44);
-    border-radius: 50%;
-    transition: 1s linear;
-    z-index: 1000;
-  }
-  #scroll-top.active {
-    top: calc(100% - 12rem);
-  }
+  position: fixed;
+  top: -140%;
+  left: 2rem; /* changed from right to left */
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  background: #e90303;
+  color: rgb(17, 17, 17);
+  border-radius: 50%;
+  transition: 1s linear;
+  z-index: 1000;
+}
+#scroll-top.active {
+  top: calc(100% - 12rem);
+}
+/* scroll top ends */
   /* scroll top ends */
