@@ -19,7 +19,7 @@ function handleBooking(event) {
         if (isSuccess) {
             alert("Booking successful! Thank you for choosing Wanderlister.");
         } else {
-            alert("Booking failed. Please check your connection and try again.");
+            alert("Booking failed. No available Slots at the moment. Please try again later.");
         }
 
         // Reset button text
