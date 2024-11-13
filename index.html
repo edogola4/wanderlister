@@ -282,11 +282,11 @@
         <!-- ========hero section ends=========== -->
         
 
- <!-- - NOTIFICATION TOAST -->
+ <!-- - NOTIFICATION TOAST --
  <div class="notification-container">
 
   
-  <!-- Toast Item 1 -->
+  !-- Toast Item 1 --
   <div class="notification-toast" data-toast>
 
     <button class="toast-close-btn" data-toast-close>
@@ -303,7 +303,52 @@
         <time datetime="PT2M">2 Minutes</time> ago
       </p>
     </div>
+  </div>-->
+
+  <div class="notification-toast" data-toast>
+  
+    <!-- Close Button -->
+    <button class="toast-close-btn" data-toast-close aria-label="Close Notification">
+      <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+    </button>
+  
+    <!-- Toast Banner with image -->
+    <div class="toast-banner">
+      <img src="./images/booking-icon.png" alt="Booking Notification Icon" width="80" height="70">
+    </div>
+  
+    <!-- Toast Message and Details -->
+    <div class="toast-detail">
+      <p class="toast-message"><strong>Exciting!</strong> Someone in Kisumu just booked with us!</p>
+      <p class="toast-meta">
+        <time datetime="PT2M">2 minutes ago</time>
+      </p>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const toast = document.querySelector(".notification-toast");
+  const closeBtn = document.querySelector(".toast-close-btn");
+
+  // Show toast notification
+  function showToast() {
+    toast.setAttribute("data-toast", "active");
+    setTimeout(() => {
+      toast.removeAttribute("data-toast");
+    }, 5000); // Hide after 5 seconds
+  }
+
+  // Close the notification
+  closeBtn.addEventListener("click", () => {
+    toast.removeAttribute("data-toast");
+  });
+
+  // Trigger toast notification as an example
+  showToast();
+});
+
+    </script>
   </div>
+  
 
 
 
