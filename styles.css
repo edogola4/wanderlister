@@ -636,7 +636,7 @@
 
    /**
  * NOTIFICATION TOAST 
- */
+ *
 
 .notification-toast {
     position: fixed;
@@ -721,7 +721,107 @@
   .toast-meta {
     font-size: var(--fs-10);
     color: var(--sonic-silver);
+  }*/
+  /**
+ * NOTIFICATION TOAST 
+ */
+
+.notification-toast {
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  right: 20px;
+  max-width: 320px;
+  background: rgb(255, 253, 253);
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 18px;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transform: translateX(calc(-100% - 40px));
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  z-index: 5;
+  animation: slideInOut 8s ease-in-out infinite;
+}
+
+@keyframes slideInOut {
+  0%, 40%, 100% {
+      transform: translateX(calc(-100% - 40px));
+      opacity: 0;
+      visibility: hidden;
   }
+  45%, 90% {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+  }
+}
+
+.notification-toast.closed {
+  display: none;
+}
+
+.toast-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: var(--sonic-silver);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.toast-close-btn:hover {
+  color: var(--onyx);
+}
+
+.toast-banner {
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--cultured);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-gray);
+}
+
+.toast-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.toast-detail {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.toast-message {
+  font-size: var(--fs-10);
+  color: var(--sonic-silver);
+  margin: 0 0 5px;
+  font-weight: var(--weight-400);
+}
+
+.toast-title {
+  font-size: var(--fs-8);
+  font-weight: var(--weight-600);
+  color: var(--onyx);
+  margin-bottom: 5px;
+}
+
+.toast-meta {
+  font-size: var(--fs-10);
+  color: var(--sonic-silver);
+}
+
   
  
 
