@@ -1382,3 +1382,35 @@ ul {
   height: 50px;
   margin: 10px auto;
 }
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+/* Toggle Button Styles */
+.mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.mode-toggle:hover {
+  background-color: #e0e0e0;
+}
+
+/* Dark Mode Button Styles */
+body.dark-mode .mode-toggle {
+  background-color: #444;
+  color: #fff;
+}
