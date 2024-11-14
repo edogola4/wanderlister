@@ -4,6 +4,9 @@ const responseContainer = document.getElementById('response-container');
 const responseMessage = document.getElementById('response-message');
 const responseImage = document.getElementById('response-image');
 
+// Array to keep track of booking attempts
+let bookingLog = [];
+
 // Function to handle the booking action
 function handleBooking(event) {
     event.preventDefault(); // Prevent the default link action
@@ -21,6 +24,14 @@ function handleBooking(event) {
     setTimeout(() => {
         // Random success/failure condition
         const isSuccess = Math.random() > 0.5;
+        const bookingStatus = isSuccess ? "Success" : "Failure";
+
+        // Log the booking attempt
+        bookingLog.push({
+            buttonId: button.id,
+            status: bookingStatus,
+            timestamp: new Date().toLocaleString()
+        });
 
         // Display appropriate success or failure message and image
         if (isSuccess) {
@@ -39,6 +50,12 @@ function handleBooking(event) {
 
         // Reset button text
         button.textContent = "Book Now";
+
+        // Display booking log in the console using array iteration
+        console.log("Booking Attempts:");
+        bookingLog.forEach((log, index) => {
+            console.log(`${index + 1}. Button ID: ${log.buttonId} - Status: ${log.status} - Time: ${log.timestamp}`);
+        });
     }, 1000); // 1-second delay for simulation
 }
 
@@ -46,3 +63,10 @@ function handleBooking(event) {
 bookNowButtons.forEach(button => {
     button.addEventListener('click', handleBooking);
 });
+
+
+
+// Explanation for the code above:
+// Booking Log Array: The bookingLog array stores each booking attempt, including button ID, status, and timestamp.
+// forEach Iteration: After each booking attempt, the array is iterated with forEach to display booking history in the console. This uses array iteration to log each attempt.
+// Console Logging: Each entry in bookingLog is printed with details like the button ID, status, and timestamp 
