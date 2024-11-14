@@ -26,20 +26,21 @@ function addWeatherItem(data) {
   const weatherItem = document.createElement('li');
   weatherItem.classList.add('weather-item');
 
-  const cityName = data.name;
-  const temperature = data.main.temp;
-  const weatherDescription = data.weather[0].description;
-  const humidity = data.main.humidity;
-  const windSpeed = data.wind.speed;
+  // Array of weather details with icons for each label
+  const weatherDetails = [
+    { label: 'City', value: data.name, icon: '<i class="fas fa-city"></i>' },
+    { label: 'Temperature', value: `${data.main.temp}°C`, icon: '<i class="fas fa-thermometer-half"></i>' },
+    { label: 'Condition', value: data.weather[0].description, icon: '<i class="fas fa-cloud-sun"></i>' },
+    { label: 'Humidity', value: `${data.main.humidity}%`, icon: '<i class="fas fa-tint"></i>' },
+    { label: 'Wind Speed', value: `${data.wind.speed} m/s`, icon: '<i class="fas fa-wind"></i>' }
+  ];
 
-  // Dynamically populating weather details
-  weatherItem.innerHTML = `
-    <h3>${cityName}</h3>
-    <p><strong>Temperature:</strong> ${temperature}°C</p>
-    <p><strong>Condition:</strong> ${weatherDescription}</p>
-    <p><strong>Humidity:</strong> ${humidity}%</p>
-    <p><strong>Wind Speed:</strong> ${windSpeed} m/s</p>
-  `;
+  // Use forEach to iterate and dynamically create elements with icons
+  weatherDetails.forEach(detail => {
+    const detailElement = document.createElement('p');
+    detailElement.innerHTML = `${detail.icon} <strong>${detail.label}:</strong> ${detail.value}`;
+    weatherItem.appendChild(detailElement);
+  });
 
   weatherList.appendChild(weatherItem);
   document.getElementById('destinationInput').value = ''; // Clear the input field
@@ -50,3 +51,7 @@ document.getElementById('weatherForm').addEventListener('submit', function(event
   event.preventDefault();  // Prevent the form from submitting
   fetchWeather();
 });
+
+// An array called weatherDetails contains objects with label and value properties, representing the weather data you want to display.
+// We use forEach to iterate over weatherDetails, creating a new paragraph element for each item and appending it to weatherItem.
+// 
