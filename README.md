@@ -1,6 +1,6 @@
 ![Preview](./img/preview.png)
 
-
+.
 # Wanderlister
 
 Wanderlister is a sophisticated web application designed to assist users in creating and managing their travel bucket lists. With features such as dedicated destination pages, real-time weather forecasts, and seamless booking options, Wanderlister aims to enhance the travel planning experience.
