@@ -1,20 +1,20 @@
 ![Preview](./img/preview.png)
 
-.
+
 # Wanderlister
 
-Wanderlister is a sophisticated web application designed to assist users in creating and managing their travel bucket lists. With features such as dedicated destination pages, real-time weather forecasts, and seamless booking options, Wanderlister aims to enhance the travel planning experience.
+Wanderlister is a sophisticated web application designed to assist users in creating and managing their travel bucket lists. With dedicated destination pages, real-time weather forecasts, and seamless booking options, Wanderlister aims to enhance the travel planning experience.
 
 ## Features
 
 - **Bucket List Management**: Users can efficiently add, edit, and remove destinations from their travel lists.
-- **Destination Pages**: Each destination is presented with comprehensive information and high-quality images.
+- **Destination Pages**: Each destination has comprehensive information and high-quality images.
 - **Weather Forecast Integration**: Access real-time weather updates for selected destinations.
 - **Booking Functionality**: Utilize the "Book Now" button to explore and secure travel options directly through the application.
 
 ## Technology Stack
 
-- **HTML**: Utilized for structuring the content of the application.
+- **HTML**: Utilized to structure the content of the application.
 - **CSS**: Employed for styling and layout to ensure a visually appealing user interface.
 - **JavaScript**: Implemented for interactivity and dynamic content management.
 - **Font Awesome**: for icons
@@ -55,4 +55,4 @@ This project does not currently have a specified license. Users are free to util
 
 ## Acknowledgments
 
-I extend my gratitude myself as a contributor and users for their valuable feedback and support.
+I extend my gratitude to myself as a contributor and users for their valuable feedback and support.
